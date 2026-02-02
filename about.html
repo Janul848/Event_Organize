@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | EventMasters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* HERO SECTION */
+        .about-hero {
+            background: url("https://images.unsplash.com/photo-1511578314322-379afb476865")
+                center/cover no-repeat;
+            min-height: 60vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+
+        /* SECTION SPACING */
+        section {
+            padding: 80px 0;
+        }
+
+        /* IMAGES */
+        .about-img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        /* VALUES */
+        .value-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .value-box:hover {
+            transform: translateY(-10px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 25px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- COMMON NAVBAR -->
+<div id="navbar"></div>
+
+<!-- HERO -->
+<section class="about-hero">
+    <div class="container text-center about-hero-content">
+        <h1 class="display-4 fw-bold">About EventMasters</h1>
+        <p class="lead mt-3">
+            Creating unforgettable events with passion, creativity, and precision.
+        </p>
+    </div>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section>
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-3">Who We Are</h2>
+                <p class="text-muted">
+                    EventMasters is a professional event management company specializing
+                    in weddings, corporate events, private parties, and large celebrations.
+                </p>
+                <p class="text-muted">
+                    From planning to execution, we focus on creativity, quality,
+                    and flawless delivery to make every event memorable.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img
+                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"
+                    class="about-img"
+                    alt="Event Planning Team">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE IMAGE -->
+<section class="bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-md-6">
+                <img
+                    src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe"
+                    class="about-img"
+                    alt="Corporate Event">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-3">Our Experience</h2>
+                <p class="text-muted">
+                    With years of experience and hundreds of successful events,
+                    we bring confidence, innovation, and professionalism to every project.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VALUES -->
+<section>
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our Core Values</h2>
+            <p class="text-muted">What makes us different</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="value-box">
+                    <h5 class="fw-bold">Creativity</h5>
+                    <p class="text-muted">
+                        Unique ideas tailored to every event.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-box">
+                    <h5 class="fw-bold">Precision</h5>
+                    <p class="text-muted">
+                        Perfect planning with attention to detail.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-box">
+                    <h5 class="fw-bold">Commitment</h5>
+                    <p class="text-muted">
+                        Your satisfaction is our top priority.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2024 EventMasters. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- NAVBAR FETCH -->
+<script>
+fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+
+</body>
+</html>

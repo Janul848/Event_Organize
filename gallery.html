@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EventMasters | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* PAGE TITLE */
+        .page-header {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        /* PORTFOLIO */
+        .portfolio-card {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
+            background: #fff;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .portfolio-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .portfolio-title {
+            font-weight: 600;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- COMMON NAVBAR -->
+<div id="navbar"></div>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <h1 class="fw-bold">Our Portfolio</h1>
+        <p class="text-muted">A glimpse of our successful events</p>
+    </div>
+</section>
+
+<!-- PORTFOLIO GRID -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Wedding -->
+            <div class="col-md-4">
+                <div class="portfolio-card text-center p-3">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="Wedding Event">
+                    <h5 class="portfolio-title">Wedding Event</h5>
+                    <p class="text-muted">Luxury wedding setup</p>
+                </div>
+            </div>
+
+            <!-- Corporate -->
+            <div class="col-md-4">
+                <div class="portfolio-card text-center p-3">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Corporate Event">
+                    <h5 class="portfolio-title">Corporate Event</h5>
+                    <p class="text-muted">Business conference</p>
+                </div>
+            </div>
+
+            <!-- Birthday -->
+            <div class="col-md-4">
+                <div class="portfolio-card text-center p-3">
+                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf" alt="Birthday Party">
+                    <h5 class="portfolio-title">Birthday Party</h5>
+                    <p class="text-muted">Fun & vibrant celebration</p>
+                </div>
+            </div>
+
+            <!-- Engagement -->
+            <div class="col-md-4">
+                <div class="portfolio-card text-center p-3">
+                    <img src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe" alt="Engagement">
+                    <h5 class="portfolio-title">Engagement Ceremony</h5>
+                    <p class="text-muted">Elegant decoration</p>
+                </div>
+            </div>
+
+            <!-- Concert -->
+            <div class="col-md-4">
+                <div class="portfolio-card text-center p-3">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30" alt="Concert">
+                    <h5 class="portfolio-title">Live Concert</h5>
+                    <p class="text-muted">Stage & lighting setup</p>
+                </div>
+            </div>
+
+            <!-- Exhibition -->
+            <div class="col-md-4">
+                <div class="portfolio-card text-center p-3">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678" alt="Exhibition">
+                    <h5 class="portfolio-title">Exhibition</h5>
+                    <p class="text-muted">Professional exhibition stall</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-light text-center py-3">
+    <p class="mb-0">&copy; 2026 EventMasters. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- NAVBAR FETCH -->
+<script>
+fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+
+</body>
+</html>
